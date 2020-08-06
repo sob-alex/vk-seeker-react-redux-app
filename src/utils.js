@@ -18,16 +18,6 @@ export const chooseSize = (arr, option) => {
     return arr.find((item) => item.type == 'x').url;
   }
 };
-export const showError = (error) => {
-  let errorWidnow = document.querySelector('.place-map__error-window');
-  console.log(errorWidnow);
-  errorWidnow.style.display = 'flex';
-  if (error.message === 'Network Error') {
-    errorWidnow.querySelector('h3').innerHTML = 'Проверьте подключение к интернету';
-  } else {
-    errorWidnow.querySelector('h3').innerHTML = error.message;
-  }
-};
 
 export const changeToDot = (str) => {
   return str
