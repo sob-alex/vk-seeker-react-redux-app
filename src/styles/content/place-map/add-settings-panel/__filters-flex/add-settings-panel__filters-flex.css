@@ -1,0 +1,8 @@
+.add-settings-panel__filters-flex {
+  display: flex;
+}
+.add-settings-panel__filters-flex p {
+  font-size: 1.15em;
+
+  margin-bottom: 9px;
+}

@@ -1,0 +1,7 @@
+.add-settings-panel__human-filters {
+  flex: 1;
+}
+.add-settings-panel__human-filters h2 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}

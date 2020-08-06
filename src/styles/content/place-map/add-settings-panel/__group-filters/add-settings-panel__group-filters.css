@@ -1,0 +1,8 @@
+.add-settings-panel__group-filters {
+  flex: 1;
+  padding-left: 20px;
+}
+.add-settings-panel__group-filters h2 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}

@@ -1,13 +1,67 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import './styles/style.css';
+@import './styles/footer/footer.css';
+@import './styles/main-container.css';
+@import './styles/header/header.css';
+@import './styles/header/__inner/header__inner.css';
+@import './styles/content/content.css';
+@import './styles/content/place-map/place-map.css';
+@import './styles/content/place-map/map/map.css';
+@import './styles/content/place-map/__authorization-form--inner/place-map__authorization-form--inner.css';
+@import './styles/content/place-map/__authorization-form/place-map__authorization-form.css';
+@import './styles/content/place-map/__error-window--inner/place-map__error-window--inner.css';
+@import './styles/content/place-map/__error-window/place-map__error-window.css';
+@import './styles/content/place-map/__open-search-result-panel/place-map__open-search-result-panel.css';
+@import './styles/content/place-map/__search-city-panel/place-map__search-sity-pannel.css';
+@import './styles/content/place-map/add-settings-panel/__close/add-settings-panel__close.css';
+@import './styles/content/place-map/add-settings-panel/__count-of-results/add-settings-panel__count-of-results.css';
+@import './styles/content/place-map/add-settings-panel/__filters-flex/add-settings-panel__filters-flex.css';
+@import './styles/content/place-map/add-settings-panel/__group-filters--city/add-settings-panel__group-filters--city.css';
+@import './styles/content/place-map/add-settings-panel/__group-filters--members_count/add-settings-panel__group-filters--members_count.css';
+@import './styles/content/place-map/add-settings-panel/__group-filters/add-settings-panel__group-filters.css';
+@import './styles/content/place-map/add-settings-panel/__human-filters--age/add-settings-panel__human-filters--age.css';
+@import './styles/content/place-map/add-settings-panel/__human-filters--city/add-settings-panel__human-filters--city.css';
+@import './styles/content/place-map/add-settings-panel/__human-filters--common-friend/add-settings-panel__human-filters--common-friend.css';
+@import './styles/content/place-map/add-settings-panel/__human-filters--relation/add-settings-panel__human-filters--relation.css';
+@import './styles/content/place-map/add-settings-panel/__human-filters--sex/add-settings-panel__human-filters--sex.css';
+@import './styles/content/place-map/add-settings-panel/__human-filters/add-settings-panel__human-filters.css';
+@import './styles/content/place-map/add-settings-panel/__is-extended/add-settings-panel__is-extended.css';
+@import './styles/content/place-map/add-settings-panel/__label-container--checkmark-checkbox/add-settings-panel__label-container--checkmark-checkbox.css';
+@import './styles/content/place-map/add-settings-panel/__label-container--checkmark/add-settings-panel__label-container--checkmark.css';
+@import './styles/content/place-map/add-settings-panel/__label-container/add-settings-panel__label-container.css';
+@import './styles/content/place-map/add-settings-panel/__main-filters-flex--left-side/add-settings-panel__main-filters-flex--left-side.css';
+@import './styles/content/place-map/add-settings-panel/__main-filters-flex--right-side/add-settings-panel__main-filters-flex--right-side.css';
+@import './styles/content/place-map/add-settings-panel/__main-filters-flex/add-settings-panel__main-filters-flex.css';
+@import './styles/content/place-map/add-settings-panel/__resolution/add-settings-panel__resolution.css';
+@import './styles/content/place-map/add-settings-panel/__type-search/add-settings-panel__type-search.css';
+@import './styles/content/place-map/add-settings-panel/add-settings-panel.css';
+@import './styles/content/search-results-pannel/__close-panel/search-results-panel__close-panel.css';
+@import './styles/content/search-results-pannel/__column--description--date/search-results-panel__column--description--date.css';
+@import './styles/content/search-results-pannel/__column--description--person-name/search-results-panel__column--description--person-name.css';
+@import './styles/content/search-results-pannel/__column--description/search-results-panel__column--description.css';
+@import './styles/content/search-results-pannel/__content--description/search-results-panel__content--description.css';
+@import './styles/content/search-results-pannel/__description--add/search-results-panel__description--add.css';
+@import './styles/content/search-results-pannel/__description--date/search-results-panel__description--date.css';
+@import './styles/content/search-results-pannel/__description--main/search-results-panel__description--main.css';
+@import './styles/content/search-results-pannel/__description--mark-on-map/search-results-panel__description--mark-on-map.css';
+@import './styles/content/search-results-pannel/__description--person-anchor/search-results-panel__description--person-anchor.css';
+@import './styles/content/search-results-pannel/__description--person-name/search-results-panel__description--person-name.css';
+@import './styles/content/search-results-pannel/__modal--close-modal/search-results-panel__modal--close-modal.css';
+@import './styles/content/search-results-pannel/__modal--content/search-results-panel__modal--content.css';
+@import './styles/content/search-results-pannel/__modal--img/search-results-panel__modal--img.css';
+@import './styles/content/search-results-pannel/__modal/search-results-panel__modal.css';
+@import './styles/content/search-results-pannel/__row--column/search-results-panel__row--column.css';
+@import './styles/content/search-results-pannel/__row/search-results-panel__row.css';
+@import './styles/content/search-results-pannel/__show-more/search-results-panel__show-more.css';
+@import './styles/content/search-results-pannel/search-results-panel.css';
+@import './styles/content/settings-panel/__label-container--checkmark/settings-panel__label-container--checkmark.css';
+@import './styles/content/settings-panel/__label-container/settings-panel__label-container.css';
+@import './styles/content/settings-panel/__other-settings-button/settings-panel__other-settings-button.css';
+@import './styles/content/settings-panel/__radius/settings-panel__radius.css';
+@import './styles/content/settings-panel/__sort/settings-panel__sort.css';
+@import './styles/content/settings-panel/__submit/settings-panel__submit.css';
+@import './styles/content/settings-panel/__time-bounds-data/settings-panel__time-bounds-data.css';
+@import './styles/content/settings-panel/__time-bounds-word-search/settings-panel__time-bounds-word-search.css';
+@import './styles/content/settings-panel/__time-bounds/settings-panel__time-bounds.css';
+@import './styles/content/settings-panel/settings-panel.css';
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import './styles/media-queries.css';

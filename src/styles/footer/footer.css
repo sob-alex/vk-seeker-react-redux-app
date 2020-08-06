@@ -1,0 +1,32 @@
+.footer {
+  padding: 20px;
+  background-color: #0f0f0f;
+  background: linear-gradient(-90deg, #0f0f0f, #2e2e2e);
+}
+
+.footer h2 {
+  margin-top: 0;
+  font-size: 1.6em;
+  color: rgb(255, 149, 20);
+  text-align: center;
+}
+
+.footer p {
+  font-size: 1.2em;
+  color: #f1f1f1;
+}
+
+.footer__author {
+  background-color: #efefef;
+  padding: 5px;
+  text-align: center;
+}
+
+.footer__author a {
+  text-decoration: none;
+  color: #444;
+}
+.footer__author a:hover {
+  text-decoration: none;
+  color: #000;
+}
