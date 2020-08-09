@@ -14,7 +14,7 @@ const store = createStore(
   applyMiddleware(thunk)
 );
 store.subscribe(() => {
-  console.log(store.getState().data);
+  console.log(store.getState().params);
 });
 window.store = store;
 ReactDOM.render(

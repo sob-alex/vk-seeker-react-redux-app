@@ -13,7 +13,7 @@ const PlaceMap = () => {
   const addSetPanel = useSelector((state) => state.app.is_add_settings_panel_shown);
   const errorWindow = useSelector((state) => state.app.is_error_window_shown);
   const authForm = useSelector((state) => state.app.is_auth_form_shown);
-
+  const searchModal = useSelector((state) => state.app.is_search_results_modal_shown);
   const searchResultsPanel = useSelector((state) => state.app.is_search_results_panel_shown);
   const photos = useSelector((state) => state.data.photos);
   const token = useSelector((state) => state.params.token);
@@ -30,8 +30,8 @@ const PlaceMap = () => {
       >
         Показать результаты
       </div>
-      {searchResultsPanel ? <CloseResults /> : null}
-      {searchResultsPanel && photos.length ? <ShowMoreResults /> : null}
+      {searchResultsPanel && !searchModal ? <CloseResults /> : null}
+      {searchResultsPanel && photos.length && !searchModal ? <ShowMoreResults /> : null}
       {!authForm ? null : <AuthorizationForm />}
       {errorWindow ? <ErrorWindow /> : null}
       {addSetPanel ? <AddSettingsPanel /> : null}

@@ -1,4 +1,9 @@
 .search-results-panel__column--description--person-name {
   color: darkorange;
   text-decoration: none;
+  margin: 0;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

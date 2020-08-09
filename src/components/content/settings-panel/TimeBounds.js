@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable default-case */
+import React, { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { changeStartTime, changeEndTime, changeWordSearch } from '../../../redux/actions';
 
@@ -6,11 +7,16 @@ const TimeBounds = () => {
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
   const [word, setWord] = useState('');
-
+  const startTimeInput = useRef(null);
+  const endTimeInput = useRef(null);
   const dispatch = useDispatch();
 
   const handleTimeChange = (e) => {
-    const time = new Date(e.target.value).getTime() / 1000;
+    let time = new Date(e.target.value).getTime() / 1000;
+    console.log(time);
+    time = isNaN(time) ? '' : time;
+    console.log(time);
+
     switch (e.target.name) {
       case 'start':
         if (!isNaN(time)) {
@@ -26,6 +32,18 @@ const TimeBounds = () => {
         break;
     }
   };
+
+  const handleClickStartTime = (e) => {
+    setStartTime('');
+    dispatch(changeStartTime(''));
+    startTimeInput.current.value = '';
+  };
+  const handleClickEndTime = (e) => {
+    setEndTime('');
+    dispatch(changeEndTime(''));
+    endTimeInput.current.value = '';
+  };
+
   const handleWordChange = (e) => {
     const word = e.target.value.trim();
     setWord(word);
@@ -37,16 +55,23 @@ const TimeBounds = () => {
     <div className="settings-panel__time-bounds">
       <h2>Временной диапазон:</h2>
       <form>
-        <span>Дата начала:</span> <br />
+        <span className="settings-panel__time-bounds--clear">
+          <span>Дата начала:</span> <span onClick={handleClickStartTime}>Сбросить</span>
+        </span>
+        <br />
         <input
+          ref={startTimeInput}
           className="settings-panel__time-bounds-data"
           name="start"
           type="date"
           onBlur={handleTimeChange}
         />
         <br />
-        <span>Дата конца:</span> <br />
+        <span className="settings-panel__time-bounds--clear">
+          <span>Дата конца:</span> <span onClick={handleClickEndTime}>Сбросить</span>
+        </span>
         <input
+          ref={endTimeInput}
           className="settings-panel__time-bounds-data"
           name="end"
           type="date"

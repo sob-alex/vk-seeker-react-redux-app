@@ -23,9 +23,9 @@ const Tile = ({ name, datee, src, ownIds, numberId }) => {
     <div className="search-results-panel__row--column" onClick={obr}>
       <img src={src} ref={img} />
       <div className="search-results-panel__column--description">
-        <span ref={Name} className="search-results-panel__column--description--person-name">
+        <p ref={Name} className="search-results-panel__column--description--person-name">
           {name}
-        </span>
+        </p>
         <span ref={date} className="search-results-panel__column--description--date">
           {datee}
         </span>

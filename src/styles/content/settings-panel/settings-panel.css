@@ -1,6 +1,6 @@
 .settings-panel {
   position: relative;
-  flex-grow: 1;
+  width: 270px;
 
   /* height: 670px; */
   background: #2e2e2e;

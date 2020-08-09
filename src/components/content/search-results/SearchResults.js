@@ -14,7 +14,7 @@ const SearchResults = () => {
   const showScroll = useSelector((state) => state.app.is_scroll_shown);
 
   return (
-    <div className="search-results-panel" style={{ overflow: showScroll ? 'auto' : 'initial' }}>
+    <div className="search-results-panel" style={{ overflow: showScroll ? 'auto' : 'hidden' }}>
       <div className="search-results-panel__row">
         {photoToDisplay.map((el) => {
           if (el.lat) {

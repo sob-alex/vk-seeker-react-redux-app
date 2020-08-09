@@ -45,6 +45,7 @@ export const appReducer = (state = initialState, action) => {
       return { ...state, is_error_window_shown: false };
     case SHOW_AUTH_FORM:
       return { ...state, is_auth_form_shown: true };
+
     default:
       return state;
   }

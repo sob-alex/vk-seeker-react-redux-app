@@ -38,10 +38,14 @@ export const hideAddSettingsPanel = () => ({ type: HIDE_ADD_SETTINGS });
 export const showSearchResultsPanel = () => ({ type: SHOW_RESULTS_PANEL });
 export const hideSearchResultsPanel = () => ({ type: HIDE_RESULTS_PANEL });
 export const showSearchModal = (target) => (dispatch) => {
+  document.body.style.overflow = 'hidden';
+  document.getElementsByClassName('header')[0].style.display = 'none';
   dispatch({ type: SHOW_RESULTS_MODAL, payload: target });
   dispatch(toggleScroll());
 };
 export const hideSearchModal = () => (dispatch) => {
+  document.body.style.overflow = 'auto';
+  document.getElementsByClassName('header')[0].style.display = '';
   dispatch({ type: HIDE_RESULTS_MODAL });
   dispatch(toggleScroll());
 };

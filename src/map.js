@@ -32,7 +32,7 @@ export default async function (changeCoords, clearData) {
   // получение карты по айди и установка центра и масштаба на карте
   map_ = DG.map('map', {
     center: [52.26, 87.12],
-    zoom: 6,
+    zoom: 9,
   });
   console.log(map_);
   //Создаем маркер
