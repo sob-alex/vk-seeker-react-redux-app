@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+It is web application which allows you to find VK ptotos on 2gis map by geolocation.
+
 **LINK**: https://vk-seeker.herokuapp.com/
 
 ## Screenshot
