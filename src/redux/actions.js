@@ -91,7 +91,7 @@ export const fetchPhotos = (params) => async (dispatch) => {
   }
 };
 export const fetchCityCoodrs = (city) => async (dispatch) =>{
-  let response = await fetch(`http://localhost/getCity?city=${city}`);
+  let response = await fetch(`/getCity?city=${city}`);
 
 if (response.ok) {  
 
