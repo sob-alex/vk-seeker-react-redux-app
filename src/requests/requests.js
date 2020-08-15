@@ -116,8 +116,11 @@ export default async (params, dispatch) => {
     let data = await response.json();
 
     let results = [];
+    console.log(data);
+
     // Ошибка, если токен устарел, или его нет
     if (data.error && data.error.error_code == 5) {
+      console.log(data);
       console.log('ошибка, токен устарел или его нет');
       dispatch(showAuthForm());
       return results;
@@ -159,7 +162,6 @@ export default async (params, dispatch) => {
       // return data;
     }
   } catch (error) {
-    console.log(error.message);
     dispatch(showErrorWindow(error.message));
   }
 };

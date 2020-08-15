@@ -30,6 +30,7 @@ const PlaceMap = () => {
       >
         Показать результаты
       </div>
+      <SearchSityPanel/>
       {searchResultsPanel && !searchModal ? <CloseResults /> : null}
       {searchResultsPanel && photos.length && !searchModal ? <ShowMoreResults /> : null}
       {!authForm ? null : <AuthorizationForm />}

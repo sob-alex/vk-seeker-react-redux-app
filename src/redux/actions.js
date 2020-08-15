@@ -1,5 +1,6 @@
 import request from '../requests/requests';
-import { addMarkersToMap } from '../map';
+import { addMarkersToMap, setView } from '../map';
+import {changeToDot} from '../utils'
 import {
   SHOW_ADD_SETTINGS,
   HIDE_ADD_SETTINGS,
@@ -31,6 +32,7 @@ import {
   HIDE_ERROR_WINDOW,
   SHOW_AUTH_FORM,
   CLEAR_DATA_FROM_CONTAINER,
+  FETCH_CITY_COORDS,
 } from './types';
 
 export const showAddSettingsPanel = () => ({ type: SHOW_ADD_SETTINGS });
@@ -88,6 +90,18 @@ export const fetchPhotos = (params) => async (dispatch) => {
     dispatch(addPartDataToDisplay());
   }
 };
+export const fetchCityCoodrs = (city) => async (dispatch) =>{
+  let response = await fetch(`http://localhost/getCity?city=${city}`);
+
+if (response.ok) {  
+
+  let json = await response.json();
+  dispatch({type: FETCH_CITY_COORDS, payload: [json.lat,json.lng]})
+  // setView(+changeToDot(json.lat), +changeToDot(json.lng));
+} else {
+  console.log("Ошибка HTTP: " + response.status);
+}
+}
 
 export const addPartDataToDisplay = () => ({
   type: ADD_PART_DATA_TO_DISPLAY,

@@ -36,5 +36,7 @@ export const CHANGE_MEMBERS_COUNT = 'ADD_SETTINGS_PANEL/CHANGE_MEMBERS_COUNT';
 
 // ***************************************
 export const LOAD_DATA = 'LOAD_DATA';
+export const FETCH_CITY_COORDS = 'FETCH_CITY_COORDS';
 export const ADD_PART_DATA_TO_DISPLAY = 'ADD_PART_DATA_TO_DISPLAY';
 export const CLEAR_DATA_FROM_CONTAINER = 'CLEAR_DATA_FROM_CONTAINER';
+ 

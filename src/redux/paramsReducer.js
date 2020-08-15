@@ -19,7 +19,7 @@ import {
 } from './types';
 import '../getToken';
 const initialState = {
-  token: localStorage.getItem('token'),
+  token: localStorage.getItem('token') ? localStorage.getItem('token') : '',
   radius: 100, //10, 100, 800, 6000, 50000
   lat: 52,
   long: 87,

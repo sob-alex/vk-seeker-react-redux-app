@@ -9,6 +9,7 @@ import {
   SHOW_ERROR_WINDOW,
   HIDE_ERROR_WINDOW,
   SHOW_AUTH_FORM,
+  FETCH_CITY_COORDS,
 } from './types';
 
 const initialState = {
@@ -20,6 +21,7 @@ const initialState = {
   is_auth_form_shown: false,
   error_info: null,
   modal_data: null,
+  viewCoords:  [52.26, 87.12] 
 };
 
 export const appReducer = (state = initialState, action) => {
@@ -45,6 +47,8 @@ export const appReducer = (state = initialState, action) => {
       return { ...state, is_error_window_shown: false };
     case SHOW_AUTH_FORM:
       return { ...state, is_auth_form_shown: true };
+    case FETCH_CITY_COORDS:
+      return { ...state, viewCoords: action.payload };
 
     default:
       return state;

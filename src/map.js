@@ -1,5 +1,5 @@
 import DG from '2gis-maps';
-import { chooseSizeForMap } from './utils';
+import { chooseSizeForMap, changeToDot } from './utils';
 import marker from './images/marker-01.png';
 import { hideSearchModal, hideSearchResultsPanel } from './redux/actions';
 
@@ -7,14 +7,7 @@ let map_;
 let myIcon;
 let group_of_markers;
 
-export default async function (changeCoords, clearData) {
-  //   let Datastore = require('nedb');
-
-  //   let map_;
-
-  //   db = new Datastore({ filename: 'city/cities.txt' });
-  //   db.loadDatabase();
-
+export default async function (changeCoords, clearData, viewCoords) {
   // загрузка карты
   try {
     await DG;
@@ -31,7 +24,7 @@ export default async function (changeCoords, clearData) {
 
   // получение карты по айди и установка центра и масштаба на карте
   map_ = DG.map('map', {
-    center: [52.26, 87.12],
+    center: viewCoords,
     zoom: 9,
   });
   console.log(map_);
@@ -67,22 +60,10 @@ export default async function (changeCoords, clearData) {
   });
 
   group_of_markers = DG.featureGroup();
-
-  //   let submitSearchCityButton = document.querySelector('.place-map__search-sity-pannel i');
-  //   let inputSearchCity = document.querySelector('.place-map__search-sity-pannel input');
-  //   const changeToDot = require('./utils').changeToDot;
-  //   const UpperCaseFirstLetter = require('./utils').UpperCaseFirstLetter;
-  //   submitSearchCityButton.onclick = () => {
-  //     console.log('rrr');
-  //     db.find({ Город: UpperCaseFirstLetter(inputSearchCity.value) }, function (err, docs) {
-  //       console.log(docs);
-  //       if (docs.length != 0) {
-  //         console.log([changeToDot(docs[0].lat), changeToDot(docs[0].lng)]);
-  //         map_.setView([+changeToDot(docs[0].lat), +changeToDot(docs[0].lng)], 12);
-  //       }
-  //     });
-  //   };
 }
+export const setView = (arr) => {
+  map_.setView([+changeToDot(arr[0]), +changeToDot(arr[1])], 12);
+};
 
 export const openPopup = (id, dispatch) => {
   console.log('in openPopup id: ', id);
