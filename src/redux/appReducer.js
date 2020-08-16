@@ -21,7 +21,7 @@ const initialState = {
   is_auth_form_shown: false,
   error_info: null,
   modal_data: null,
-  viewCoords:  [52.26, 87.12] 
+  viewCoords:  [55.03, 82.92] 
 };
 
 export const appReducer = (state = initialState, action) => {
